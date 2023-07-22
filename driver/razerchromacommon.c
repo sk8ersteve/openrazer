@@ -650,10 +650,11 @@ struct razer_report razer_chroma_extended_matrix_effect_breathing_single(unsigne
     struct razer_report report = razer_chroma_extended_matrix_effect_base(0x09, variable_storage, led_id, 0x02);
 
     report.arguments[3] = 0x01;
+    report.arguments[4] = 0x01;
     report.arguments[5] = 0x01;
 
     report.arguments[6] = rgb1->r;
-    report.arguments[7] = rgb1->g;
+    report.arguments[7] = rgb1->r;
     report.arguments[8] = rgb1->b;
 
     return report;
